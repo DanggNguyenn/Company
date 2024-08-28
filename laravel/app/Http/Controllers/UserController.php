@@ -6,10 +6,13 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Mail;
 use Carbon\Carbon;
+use Illuminate\Contracts\Auth\MustVerifyEmail;
 
 
-class UserController extends Controller
+class UserController extends Controller 
 {
     public function showRegistrationForm()
     {
